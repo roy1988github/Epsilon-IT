@@ -171,3 +171,37 @@ function downloadProposalPdf(selected, customer) {
     };
     document.head.appendChild(script);
 })();
+    // Navigation bar button logic
+    document.getElementById('ourProductBtn').addEventListener('click', function() {
+        window.location.href = 'index.html'; // reloads landing page
+    });
+
+    document.getElementById('aboutUsBtn').addEventListener('click', function() {
+        document.getElementById('aboutUsModal').style.display = 'block';
+    });
+
+    document.getElementById('closeAboutUs').addEventListener('click', function() {
+        document.getElementById('aboutUsModal').style.display = 'none';
+    });
+
+    window.onclick = function(event) {
+        var modal = document.getElementById('aboutUsModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    document.getElementById('howToOrderBtn').addEventListener('click', function() {
+        document.getElementById('howToOrderModal').style.display = 'block';
+    });
+
+    document.getElementById('closeHowToOrder').addEventListener('click', function() {
+        document.getElementById('howToOrderModal').style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        var modal = document.getElementById('howToOrderModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
